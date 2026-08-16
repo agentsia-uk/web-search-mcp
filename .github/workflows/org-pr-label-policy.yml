@@ -1,0 +1,17 @@
+name: Organisation PR label policy
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review, labeled, unlabeled]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  pr-label-policy:
+    uses: agentsia-uk/ci-shared/.github/workflows/pr-label-policy.yml@957833d95653e17403bc4008fd4c7a49e8634b45
+    permissions:
+      contents: read
+      pull-requests: read
+
